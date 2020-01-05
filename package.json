@@ -1,0 +1,24 @@
+{
+  "name": "webpack4-record",
+  "version": "1.0.0",
+  "description": "webpack4学习记录",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeroone001/webpack4-record.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeroone001/webpack4-record/issues"
+  },
+  "homepage": "https://github.com/zeroone001/webpack4-record#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
