@@ -11,6 +11,14 @@ module.exports = {
         filename: '[name].[hash:7].js', // 打包后的文件名称
         path: resolve('dist')
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: resolve('src/tpl/index.html')
