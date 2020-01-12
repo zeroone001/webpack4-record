@@ -4,7 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const resolve = (p) => {
     return path.resolve(__dirname, '../', p);
 };
-let arr = glob.sync(resolve('src/js/**/index.js'));
+// console.log('process', process.argv.slice(2));
+const argv = require('yargs').argv;
+console.log('argv', argv);
+// const a = process.env.npm_config_env;
+let arr = glob.sync(resolve('src/js/**/*.js'));
 arr = arr.reduce(function(newArr, p) {
     let index = path.relative(resolve('src/js'), p);
     index = index.replace(/\.js$/, '');

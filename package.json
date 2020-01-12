@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && webpack --config build/webpack.config.js"
+    "webpack": "webpack --config build/webpack.config.js",
+    "build": "rm -rf dist && webpack --config build/webpack.config.js --progress --mode=development"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,12 @@
   "devDependencies": {
     "css-loader": "^3.4.1",
     "html-webpack-plugin": "^3.2.0",
+    "minimist": "^1.2.0",
     "style-loader": "^1.1.2",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "yargs": "^15.1.0",
+    "yargs-parser": "^16.1.0"
   },
   "dependencies": {
     "glob": "^7.1.6"
