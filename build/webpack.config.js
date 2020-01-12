@@ -22,10 +22,26 @@ module.exports = {
     output: {
         filename: '[name].[hash:7].js', // 打包后的文件名称
         path: resolve('dist'),
-        publicPath: './'
+        publicPath: './',
+        chunkFilename: '[name].chunk.js'
+    },
+    resolve: {
+        // 可以指明存放第三方模块的绝对路径，以减少寻找
+        modules: ['node_modules'],
+        alias: {
+            'src': resolve('src')
+        },
+        extensions: ['.js', '.css']
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                use: {
+                    loader: 'babel-loader'
+                },
+                exclude: /node_modules/
+            },
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
